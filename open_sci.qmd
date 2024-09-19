@@ -1,0 +1,111 @@
+---
+title: "Open, reproducible, sharable science"
+format:
+  revealjs: 
+    theme: moon
+editor: visual
+---
+
+## What is open science?
+
+> Open science is a set of principles and practices that aim to make scientific research from all fields accessible to everyone for the benefits of scientists and society as a whole. Open science is about making sure not only that scientific knowledge is accessible but also that the production of that knowledge itself is inclusive, equitable and sustainable. [UNESCO](https://www.unesco.org/en/open-science/about)
+
+## The Big umbrella of Open Science
+
+![Open Science is every aspect of science](images/Screenshot_19-9-2024_9327_.jpeg)
+
+## 
+
+![Open Science is underpinned by a variety of values](images/Screenshot_19-9-2024_9353_.jpeg)
+
+## **Discussion 1**
+
+What are the potential benefits or challenges of making data and methods openly available? How could open science impact your future research?
+
+## Why produce open tools and code?
+
+![](https://surveymonkey-assets.s3.amazonaws.com/survey/190105538/ac4171da-23b2-4e29-be9f-0a04b98012a8.png)
+
+## Common misconceptions about open software and code
+
+![](images/02_open_research_software_open_source.png)
+
+## 
+
+[Barnes (2010)](https://www.nature.com/articles/467753a)
+
+*My code is not good enough* "if your code is good enough to do the job, then it is good enough to release ...and releasing it will help your research and your field"
+
+*People will demand support and bug fixes*. "Publishing code may see you accused of sloppiness. Not publishing can draw allegations of fraud. Which is worse? Nobody is entitled to demand technical support for freely provided code..."
+
+*It is too much work*. "For scientists, the word publication is totemic, and signifies perfectionism. But...the original code can be published as supplementary information, available from an institutional or journal website."
+
+## Code and tools without a license are **not open**
+
+![](https://open-science-training-handbook.github.io/Open-Science-Training-Handbook_EN/Images/02%20Open%20Science%20Basics/02_open_licensing.png)
+
+## Open Code...
+
+All code for this presentation is available here: <https://github.com/DrMattG/OpenCode-Tools>
+
+![](assets/img/logo_txthoyre.png)
+
+Images come from The Open Science training handbook: <https://open-science-training-handbook.github.io/>
+
+::: {style="position: absolute; left: 750px; top: 390px; z-index:100"}
+```         
+<img src="http://goo.gl/2nLPLz" alt="">
+```
+:::
+
+## 2. **Reproducibility in Ecological Research (10 minutes)**
+
+-   **Lecture**: Introduce reproducibility—how ensuring others can replicate your work strengthens research validity.
+
+-   **Key Points**:
+
+    -   What is reproducibility and why does it matter?
+
+    -   Common challenges in ecology: observational bias, complex ecosystems.
+
+    -   Tools for reproducibility: version control (e.g., Git), coding practices, sharing scripts and protocols.
+
+-   **Discussion (10 minutes)**:
+
+    -   Ask: Have you ever tried to reproduce a study? What do you think are barriers to reproducibility, and how might they be overcome?
+
+### 3. **Sharable Science: Data Sharing & Collaboration (10 minutes)**
+
+-   **Lecture**: The power of sharing datasets, especially for large-scale ecological studies. Focus on data repositories, licensing, and ethical considerations.
+
+-   **Key Points**:
+
+    -   Data repositories (e.g., Dryad, GBIF).
+
+    -   How to make your data FAIR (Findable, Accessible, Interoperable, Reusable).
+
+    -   Ethical concerns: data ownership, sensitive species data.
+
+-   **Discussion (10 minutes)**:
+
+    -   Ask: How comfortable are you with sharing your data? What challenges or ethical dilemmas might you face in doing so?
+
+### 4. **Hands-on Example: Open and Reproducible Workflow (10 minutes)**
+
+-   **Lecture**: Walk students through a simple example of an open and reproducible workflow using R or another tool. Share a dataset and show how others could replicate your analysis.
+
+-   **Key Points**:
+
+    -   Repositories like GitHub and code-sharing platforms.
+
+    -   Practical workflow example.
+
+-   **Discussion (10 minutes)**:
+
+    -   Ask: What part of this process seems most challenging? How could you implement something similar in your own research?
+
+### 5. **Closing Discussion & Reflection (10-15 minutes)**
+
+-   **Discussion**: Recap the key themes—openness, reproducibility, and sharing—and ask students to reflect on how they might incorporate these principles in their research. Consider discussing future trends like citizen science or AI in ecological research.
+
+This format should allow students to absorb information and actively engage with the concepts!
