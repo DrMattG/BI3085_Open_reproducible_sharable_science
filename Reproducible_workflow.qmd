@@ -1,0 +1,66 @@
+---
+title: "Reproducible workflow"
+format: html
+editor: visual
+---
+
+```{r}
+#| echo: true
+#| message: false
+#| warning: false
+## First load packages and install those that are missing
+packages = c("tidyverse", "readr", "devtools", "EML")
+package.check <- lapply(
+  packages,
+  FUN = function(x) {
+    if (!require(x, character.only = TRUE)) {
+      install.packages(x, dependencies = TRUE)
+      library(x, character.only = TRUE)
+    }
+  }
+)
+```
+
+## Read the data
+
+\- [Living Norway Data Portal](https://data.livingnorway.no/dataset?key=346a9b13-5c96-4793-bcd7-d6614950e726)
+
+```{r}
+#| echo: true
+#| message: false
+#| warning: false
+datasetKey <- "346a9b13-5c96-4793-bcd7-d6614950e726"
+dataset <- RJSONIO::fromJSON(paste0("http://api.gbif.org/v1/dataset/",datasetKey,"/endpoint"))
+endpoint_url <- dataset[[1]]$url
+datasetName=sub(".*r=", "", endpoint_url)
+datsetName=sub("&v*.","", datasetName)
+tempDirLoc <- tempdir()
+localDataLoc <- file.path(tempDirLoc,datasetName)
+download.file(endpoint_url, localDataLoc, mode = "wb")
+# list the files in the archive
+unzip(zipfile = localDataLoc, list = TRUE)
+occurence <- as_tibble(read.table(unz(localDataLoc, "occurrence.txt"), header=T,sep="\t", quote=""))
+f <- unzip(localDataLoc, "eml.xml")
+eml=EML::read_eml(f)
+
+```
+
+```{r}
+#| echo: true
+#| message: false
+#| warning: false
+occurence |> 
+  mutate(date = make_date(year, month, day)) |> 
+  group_by(year, basisOfRecord) |> 
+  tally() |> 
+  ggplot(aes(year,n, fill=basisOfRecord))+
+  lims(x=c(1990, 2024))+
+  geom_histogram(stat="identity")+
+  theme_bw()
+
+
+```
+
+```{r}
+sessionInfo()
+```
